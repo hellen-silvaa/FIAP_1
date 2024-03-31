@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/vinicolas/pexels-alleksana-4186555.jpg); /* imagem de fundo */
+    background-repeat: no-repeat;
+    background-size: cover; /* a imagem estica o maximo possivel para ocupar toda tela */
+    background-position: 50%;
+
+    /* background-color: aqua; */
+    /* margin: 100px 200px 300px 400px; */
+    /* border: 20px solid #dc143c;
+    padding: 20px; */
+    /* box-sizing: border-box; */
+}
+/* vh = v. higth /// vw = vwidth */
+/* borda é para dentro e margem é para fora */
+/* bordas: double, dashed, insert , outset, groove, ridge */
+/* padding é um preenchimento interno */

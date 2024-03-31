@@ -1,0 +1,26 @@
+
+body {
+    background-color: #CCCCCC;
+    font-family: "Quicksand", sans-serif;
+    
+}
+
+h1 {
+    color: #232b86;
+    font-size: 45PX;
+    text-align: center;
+}
+
+p {
+    /* // tamanho padrão da fonte 16px */
+    font-size: 16px; 
+    line-height: 1.5;
+    font-weight: 900;
+    
+}
+
+a{
+    color: #900;
+    font-weight: 600;
+    text-decoration: none;
+}
