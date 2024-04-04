@@ -79,3 +79,15 @@ while True:
             idade = int(idade)
             break
 print(f"Voce^tem {idade} anos")
+
+while True:
+    idade = input("Diga sua idade:")
+    if idade.isnumeric():
+        if int(idade) > 0 and int(idade) < 100:
+            idade = int(idade)
+            break
+        print("numero invalido")
+        if not idade.isnumeric():
+    print("precisa ser número")
+print(f"Voce^tem {idade} anos")
+
