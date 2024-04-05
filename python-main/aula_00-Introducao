@@ -1,4 +1,4 @@
-  '''frase = "Hello World!"'
+frase = "Hello World!"'
 primeiro_numero = 1
 segundo_numero = 1.5
 booleana = True
@@ -37,10 +37,10 @@ print(f"A multiplicação entre {primeiro_numero} e {segundo_numero} é {multipl
 primeiro_numero = 2
 segundo_numero = 3
 divisao = primeiro_numero / segundo_numero
-print(f"A divisão entre {primeiro_numero} e {segundo_numero} é {divisao}")'''
+print(f"A divisão entre {primeiro_numero} e {segundo_numero} é {divisao}")
 
 
-'''//sobrescreve a ultima variavel'''
+//sobrescreve a ultima variavel
 frase = "Hello"
 frase = frase + " World "
 
