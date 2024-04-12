@@ -4,7 +4,7 @@ while True:
     if nota.isnumeric():
         nota = int(nota)
         if nota <= 10:
-            break
+            break.
 #Exercício 2
 nome = input("Diga seu nome: ")
 while len(nome) < 3:
