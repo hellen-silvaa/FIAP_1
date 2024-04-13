@@ -25,6 +25,7 @@ if forma:
     perimetro = lados*medida
     print(f"Você escolheu o {forma} com perímetro de {perimetro}")
 
+
 lados = int(input("Diga a qtd de lados: "))
 if lados < 3:
     print("Não é um polígono")
