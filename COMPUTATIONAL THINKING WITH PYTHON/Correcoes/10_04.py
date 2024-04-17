@@ -22,6 +22,7 @@ while not salario.isnumeric():
     print("Opção inválida")
     salario = input("Diga seu salario: ")
 
+.
 sexo = input("Diga f ou m")
 while not (sexo == 'f' or sexo == 'm'):#while sexo != "f" and sexo != "m":
     print("Opção inválida")
