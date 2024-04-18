@@ -162,5 +162,19 @@ if i >= num*0.5:
 # raiz quadrada é numero elevado a meio (numero*0.5)
 
 
+#12 é igual o 4
+#13 parece o da população taxa varia
+
+
+salario = 1000
+partida = 1995
+taxa = 0.015
+while partida < 2024:
+    salario *= 1 + taxa
+    taxa *= 2
+    partida += 1
+    print(salario)
+
+
 
 
