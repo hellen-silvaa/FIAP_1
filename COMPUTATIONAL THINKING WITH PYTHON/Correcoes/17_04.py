@@ -113,6 +113,53 @@ while i < n:
     b = c
     print(c)'''
 
+'''i = 0
+pares = 0
+while i <10:
+    num = input(f'Diga o {i+1} numero: ')
+    while not num.isnumeric():
+        print("Tem que ser um número!!!")
+        num = input("Diga um numero: ")
+    num = int(num)
+    if num % 2 == 0:
+        pares += 1
+        continue
+#continue -> pule esse passo do loop ele pula tudo (oposto do breack)
+    i += 1
+print(f"{pares} pares e {i-pares} impares")
+
+
+#10 fatorial
+
+num = 5
+fatorial = num
+fatorial_sting = f"{num}! = {num}"
+while num > 1:
+    num -=1
+    fatorial *= num
+    fatorial_sting += f"*{num}"
+fatorial_sting += f"*{fatorial}"
+print(fatorial_sting)'''
+
+#11
+
+num = 7
+i = 2
+while i < num/2:
+    print(f"{num}%{i}={num%i}")
+    if num % i == 0:
+        print(f"{num} não é primo")
+        break
+    elif i == num-1:
+        print(f"{num} é primo")
+        break
+    i +=1
+if i >= num*0.5:
+    print(f"{num} é primo")
+    
+#só precisa testar até a raiz quadrada do numero para saber se é ou não primo
+# raiz quadrada é numero elevado a meio (numero*0.5)
+
 
 
 
