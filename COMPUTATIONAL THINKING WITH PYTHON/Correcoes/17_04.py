@@ -66,7 +66,8 @@ while b < a:
     print(b)
     b+=1
 
-[9:44 PM] Heloísa Real
+
+
 6- #Ler nome de usuário e senha
 user = input("Digite seu nome de usuário: ")
 senha = input("Digite sua senha: ")
@@ -80,7 +81,7 @@ while senha == user:
 print("\nCERTOOO!\n"
       f"Seu nome de usuário é: {user}\n"
       f"Sua senha é: {senha}\n")
-[9:44 PM] Heloísa Real
+
 7- ''' Gerando a tabuada 1 ao 10 sem pedir ao usuário um valor '''
 #Inicia com 0
 n = 0
@@ -96,7 +97,7 @@ while n <= 10:
     #Adiciona um ao número
     n += 1
     print("-------")
-[9:44 PM] Heloísa Real
+
 '''
 RESOLUÇÃO DO PROFESSOR
 a = 1
