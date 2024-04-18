@@ -66,7 +66,52 @@ while b < a:
     print(b)
     b+=1
 
-
+[9:44 PM] Heloísa Real
+6- #Ler nome de usuário e senha
+user = input("Digite seu nome de usuário: ")
+senha = input("Digite sua senha: ")
+ 
+#Criar uma validação para a senha ser diferente do nome de usuário
+while senha == user:
+    print("\nOPA! Sua senha e seu nome de usuário não podem ser iguais! Vamos trocar isso ai!\n")
+    user = input("Digite um nome de usuário novo: ")
+    senha = input("Digite uma senha diferente do seu nome de usuário: ")
+ 
+print("\nCERTOOO!\n"
+      f"Seu nome de usuário é: {user}\n"
+      f"Sua senha é: {senha}\n")
+[9:44 PM] Heloísa Real
+7- ''' Gerando a tabuada 1 ao 10 sem pedir ao usuário um valor '''
+#Inicia com 0
+n = 0
+#Enquanto o n(1) for menor que 10:
+while n <= 10:
+    i = 0
+    #Enquanto o múltiplo for menor que 10:
+    while i <= 10:
+        #Printa a conta:
+        print(f"{n} * {i} = {n*i} ")
+        #Adiciona um a repetição
+        i += 1
+    #Adiciona um ao número
+    n += 1
+    print("-------")
+[9:44 PM] Heloísa Real
+'''
+RESOLUÇÃO DO PROFESSOR
+a = 1
+b = 2
+ 
+i = 2
+n = 17
+print(a)
+print(b)
+ 
+while i < n:
+    c = a + b
+    a = b
+    b = c
+    print(c)'''
 
 
 
