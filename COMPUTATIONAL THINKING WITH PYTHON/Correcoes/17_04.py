@@ -164,7 +164,7 @@ if i >= num*0.5:
 
 #12 é igual o 4
 #13 parece o da população taxa varia
-
+#14
 
 salario = 1000
 partida = 1995
