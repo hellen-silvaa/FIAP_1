@@ -1,5 +1,3 @@
-#Olá professor, tenha piedade, depois da última prova eu venho estudando python tododia
-
 print('Seja bem vindo à nossa vinheria')
 endereco = input('Diga o seu endereço: ')
 ano = input('Digite o ano em que você nasceu: ')
