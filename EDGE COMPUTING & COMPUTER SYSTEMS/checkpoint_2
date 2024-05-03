@@ -1,0 +1,92 @@
+#include <DHT.h> //biblioteca dht sensor library e Adafruit Unified Sensor
+#include<LiquidCrystal_I2C.h> // biblioteca LCD
+LiquidCrystal_I2C lcd(0x27,16,2); //Definindo LCD
+#define DHTPIN 2 //Definindo DHT e o pino
+#define DHTTYPE DHT22 // Definindo o modelo
+DHT dht(DHTPIN, DHTTYPE); //passando parametros para a função
+void setup() {
+  dht.begin(); //iniciando o dht
+  lcd.init();//iniciando o LCD
+  lcd.backlight(); //controle de iluminação do LCD, quando parenteses está vazio, quer dizer que está ligado
+}
+
+void loop() {
+  // Leitura da temperatura e umidade
+  float temperatura = dht.readTemperature(); // Leitura da temperatura em Celsius
+  float umidade = dht.readHumidity(); // Leitura da umidade relativa do ar
+
+  // Verifica se alguma leitura falhou
+  if (isnan(temperatura) || isnan(umidade)) { //vai verificar se o valor é NaN(Not a Number)
+    lcd.clear(); //função que limpa o display
+    lcd.print("Erro ao ler");
+    delay(2000);
+    return;
+  }
+
+//temperatura
+
+  if (temperatura < 13) {
+    lcd.clear();
+    lcd.setCursor(0, 0);//Citado para dizer em que coluna e linha aparecerá a escrita
+    lcd.print("Tempertura BAIXA");
+    lcd.setCursor(0, 1);
+    lcd.print("Temp: " + String(temperatura) + "C");
+    delay(2000);
+  }
+  else if (temperatura == 13) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Tempertura OK");
+    lcd.setCursor(0, 1);
+    lcd.print("Temp: " + String(temperatura) + "C");
+    delay(2000);
+
+  }
+  else {
+    lcd.setCursor(0, 0);
+    lcd.clear();
+    lcd.print("Tempertura ALTA");
+    lcd.setCursor(0, 1);
+    lcd.print("Temp: " + String(temperatura) + "C");
+    delay(2000);
+
+  }
+
+//umidade
+
+  if (umidade <= 59) {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Umidade BAIXA");
+    lcd.setCursor(0, 1);
+    lcd.print("Umi. = " + String(umidade) + "%");
+    delay(2000);
+
+  }
+  else if (umidade >= 60 && umidade <= 80) {
+      if(umidade == 70){
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Umidade IDEAL");
+      lcd.setCursor(0, 1);
+      lcd.print("Umi. = " + String(umidade) + "%");
+      delay(2000);
+      }
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Umidade OK");
+    lcd.setCursor(0, 1);
+    lcd.print("Umi. = " + String(umidade) + "%");
+    delay(2000);
+
+  }
+  else {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Umidade ALTA");
+    lcd.setCursor(0, 1);
+    lcd.print("Umi. = " + String(umidade) + "%");
+    delay(2000);
+
+  }
+} 
