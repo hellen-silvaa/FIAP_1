@@ -109,6 +109,146 @@ print(meu_len)
 
 
 
+#def -> definindo função
+
+#Função 1: pode votar
+'''def podeVotar(nome, idade):
+    if idade >= 16:
+        print(f"Sim, a pessoa {nome} pode votar")
+        return True
+    else:
+        print(f"Não, a pessoa {nome} ainda não pode votar")
+        return False
+
+a = podeVotar("Lucas",38)
+print(f"a primeira resposta foi {a}")
+b = podeVotar("Maira",13)
+print(f"a segunda resposta foi {b}")
+c = podeVotar("Pedro",18)
+
+
+
+#Função 2: calcula idade
+ano_atual = 2024
+def calculaIdade(nome, ano_nascimento):
+    idade = ano_atual-ano_nascimento
+    print(f"A pessoa {nome} tem {idade} anos")
+    return idade
+
+a = calculaIdade ("João", 2004)
+b = calculaIdade("Hellen", 2002)
+c = calculaIdade("Maria", 2024)
+
+
+
+
+Função 2.1: calcula idade para votar
+def podeVotar(nome, ano_nascimento):
+    idade = calculaIdade(nome, ano_nascimento)
+    if idade >= 16:
+        print(f"Sim, a pessoa {nome} pode votar")
+        return True
+    else:
+        print(f"Não, a pessoa {nome} ainda não pode votar")
+        return False
+
+def calculaIdade(nome,ano_nascimento):
+    print(f"A pessoa {nome} tem a idade {2024-ano_nascimento}")
+    return 2024-ano_nascimento
+
+a = podeVotar("Lucas",2004)
+b = podeVotar("Rafael",1996)
+c = podeVotar("Gabriela",2014)
+
+#Função 2.2: calcula idade para votar
+def calculaIdade(nome,ano_nascimento):
+    idade  = 2024-ano_nascimento
+    print(f"A pessoa {nome} tem a idade {idade}")
+    return idade
+
+
+a = calculaIdade("Lucas",2004)
+b = calculaIdade("Rafael",1996)
+c = calculaIdade("Gabriela",2014)
+
+
+#Função 2.3: calcula idade para votar
+from datetime import datetime
+
+agora = datetime.now()
+ano_atual = agora.year
+
+
+
+def calculaIdade(nome,ano_nascimento):
+    idade  = ano_atual-ano_nascimento
+    print(f"A pessoa {nome} tem a idade {idade}")
+    return idade
+
+
+a = calculaIdade("Lucas",2004)
+b = calculaIdade("Rafael",1996)
+c = calculaIdade("Gabriela",2014)
+
+from datetime import datetime
+
+#escopo é igual conjunto de variaveis
+
+
+
+#Função 2.4: calcula idade para votar
+
+def podeVotar(nome, ano_nascimento):
+    idade = calculaIdade(ano_nascimento)
+    a = 12
+    if idade >= 16:
+        print(f"Sim, a pessoa {nome} pode votar")
+        return True
+    else:
+        print(f"Não, a pessoa {nome} ainda não pode votar")
+        return False
+
+def calculaIdade(ano_nascimento):
+    return 2024-ano_nascimento
+
+
+a = podeVotar("Lucas",2004)
+b = podeVotar("Rafael",1996)
+c = podeVotar("Gabriela",2014)'''
+
+
+#Funçao 3: Maior elemento de uma lista
+
+def maior(numeros):
+    maior = 0
+    for elemento in numeros:
+        if elemento > maior:
+            maior = elemento
+    return maior
+
+n1 = maior([30,2,90,4,3])
+n2 = maior([30,2,22,4,400])
+print(n1)
+print(n2)
+
+
+#Funçao 3.1: Maior elemento de uma lista
+
+def maior(numeros):
+    maior = 0
+    for elemento in numeros:
+        if elemento >  maior:
+            maior = elemento
+    return maior
+
+
+n = maior([10,20,2,30,7]) #maior retorna o 30, o n vai valer 30
+n2 = maior([100,200,2,30,7]) #maior retorna o 200, o n vai valer 200
+n3 = maior([-2,-3,-1]) #BUG! era pra ser -1, mas vai ser 0
+
+
+
+
 
 
 
