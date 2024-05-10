@@ -7,3 +7,20 @@ def soma(lista):
 
 n1=[1,2,3,4,5]
 print(f' A soma dos elementos da lista é {soma(n1)}')'''
+
+
+'''2. Crie uma função que recebe uma lista de números e retorna o maior elemento
+da lista.'''
+
+
+def maior(numeros):
+    maior = 0
+    for elemento in numeros:
+        if elemento > maior:
+            maior = elemento
+    return maior
+
+lista1 = maior([30,2,90,4000,300,800])
+lista2 = maior([30,2,22,4,400,8000,40])
+print(f'O maior elemento da lista 1 é {lista1}')
+print(f'O maior elemento da lista 2 é {lista2}')
