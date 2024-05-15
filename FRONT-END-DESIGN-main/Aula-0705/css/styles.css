@@ -1,0 +1,65 @@
+/* Carregando a fonte baixada */
+@font-face {
+    font-family: catamaran;
+    src: url(../fonts/Catamaran-Light.ttf);
+}
+
+:root {
+    --color-blue: #192a51;
+    --color-light:#f5e6e8;
+    --color-table-even: rgba(3, 9, 34, 0.5);
+    --font-body: catamaran;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+h1 {
+    font-size: 40px;
+    margin: 20px 70px;
+    color: var(--color-blue);
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    /* border: 1px solid var(--color-blue); */
+}
+
+thead tr {
+    background-color: var(--color-blue);
+    color: var(--color-light);
+}
+
+th, td {
+    width: 25%;
+    text-align: center;
+    padding: 0.9375rem;
+    border-bottom: 1px solid var(--color-blue);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-table-even);
+}
+
+/* 
+tbody tr:hover {
+    background-color: var(--color-table-even);
+} */
+
+tbody{
+    font-size: 30px;
+}
+
+tbody tr {
+    /* font-size: 10px; */
+}
+
+tbody td {
+    font-size: 2rem;
+}
