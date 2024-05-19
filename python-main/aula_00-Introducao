@@ -7,7 +7,7 @@ print(type(frase))
 print(primeiro_numero)
 print(type(primeiro_numero))
 print(segundo_numero)
-print(type(segundo_numero))
+print(type(segundo_numero))+
 print(booleana)
 print(type(booleana))
 
