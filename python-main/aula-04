@@ -3,6 +3,7 @@ qtd = 0
 while qtd <5:
     num = int(input("Digite um número"))
     if num%2 ==0:
+k
         par =+ 1
     qtd += 1
     print(f"Você digitou {par} pares e {5-par} impares")
