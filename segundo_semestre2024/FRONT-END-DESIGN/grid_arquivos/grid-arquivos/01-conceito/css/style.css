@@ -15,6 +15,7 @@
 
 html {
     font-size: 62.5%;
+     /* representa a fonte de 10px */
 }
 
 body {
@@ -40,6 +41,38 @@ h2 {
     text-align: center;
     color: var(--bg-white);
 }
+
+.grid-container {
+    display: grid;
+}
+
+.ex-1 {
+    grid-template-columns: 200px 300px 50px 100px;
+}
+
+/* GRID SÓ DEFINE ALTURA E LARGURA QUANDO FOR REALMENTE ESSENCIAL */
+
+.ex-2 {
+    grid-template-columns: 20% 30% 40% 100px;
+}
+
+/* medida exclusiva do grid, melhor forma tamanho fracionado */
+.ex-3 {
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+/* função repeat quantidade de repetições e tamanho*/
+.ex-4{
+    grid-template-columns: repeat(3, 1fr) 100px;
+}
+
+
+/* minmax define o minimo e maximo */
+.ex-5 {
+    /* grid-template-columns: repeat(4, minmax(200px, 1fr)); */
+    grid-template-columns: 1fr 200px 100px minmax(100px, 1fr);
+}
+
 
 .box1 {
     background-color: var(--first-color);
