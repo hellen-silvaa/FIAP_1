@@ -1,0 +1,983 @@
+[
+    {
+        "id": "0b395023293d7a5c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "794a558b3d302261",
+        "type": "ui_tab",
+        "name": "Cidade1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f74ae8d48bb217b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#77096d",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#77096d",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#77096d",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#be0eae",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#77096d",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b8ef94304128ed17",
+        "type": "ui_group",
+        "name": "Temps",
+        "tab": "794a558b3d302261",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b28cf4274abfa0ba",
+        "type": "ui_group",
+        "name": "Infos",
+        "tab": "794a558b3d302261",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "26671d508204b044",
+        "type": "ui_tab",
+        "name": "Cidade2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b0ac97f842542029",
+        "type": "ui_group",
+        "name": "Temps2",
+        "tab": "26671d508204b044",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6cd25346300b21aa",
+        "type": "ui_group",
+        "name": "Infos2",
+        "tab": "26671d508204b044",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd883018b1478c68",
+        "type": "inject",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 360,
+        "wires": [
+            [
+                "e2dd9d923a9367e0",
+                "3069423ef2493a07"
+            ]
+        ]
+    },
+    {
+        "id": "e2dd9d923a9367e0",
+        "type": "http request",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?lat=-3.3614&lon=-46.7917&appid=a669c7581a465a7a7c6ca5cea61e378f&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "3bee64acab8e6a6b"
+            ]
+        ]
+    },
+    {
+        "id": "3bee64acab8e6a6b",
+        "type": "json",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "83a3012e8794af15",
+                "44beea4f748c57b2",
+                "34dfa38341c9a7d4",
+                "c8b9dc94c2a67a3b",
+                "cbee02573e545f5a",
+                "05c3621e1f88b312",
+                "e99c3627666364b6"
+            ]
+        ]
+    },
+    {
+        "id": "1a48d41653df746d",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b8ef94304128ed17",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "83a3012e8794af15",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 40,
+        "wires": [
+            [
+                "1a48d41653df746d"
+            ]
+        ]
+    },
+    {
+        "id": "1e7b349225cffa05",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b8ef94304128ed17",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp_min",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "44beea4f748c57b2",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_min",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "1e7b349225cffa05"
+            ]
+        ]
+    },
+    {
+        "id": "34dfa38341c9a7d4",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp max",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_max",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "a92871f0b19104ed"
+            ]
+        ]
+    },
+    {
+        "id": "e99c3627666364b6",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "675efc4b9e628593"
+            ]
+        ]
+    },
+    {
+        "id": "c8b9dc94c2a67a3b",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "wind.speed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind.speed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "1f714c4ef50b347d"
+            ]
+        ]
+    },
+    {
+        "id": "a92871f0b19104ed",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b8ef94304128ed17",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Temp_max",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1f714c4ef50b347d",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b28cf4274abfa0ba",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vento",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "675efc4b9e628593",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b28cf4274abfa0ba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidade",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cbee02573e545f5a",
+        "type": "debug",
+        "z": "0b395023293d7a5c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "05c3621e1f88b312",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "feels_like",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.feels_like",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "c9f518fc54f59c20"
+            ]
+        ]
+    },
+    {
+        "id": "c9f518fc54f59c20",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b28cf4274abfa0ba",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Sensação termica",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d262e7b62a6c060a",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 520,
+        "wires": [
+            [
+                "3895c18666e9e9e0"
+            ]
+        ]
+    },
+    {
+        "id": "635ad40db3338bed",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b0ac97f842542029",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp_min2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c7851e0726d703c2",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp min2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_min",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "635ad40db3338bed"
+            ]
+        ]
+    },
+    {
+        "id": "d65170eba806e9ab",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Temp max2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_max",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "f419bb545bf96085"
+            ]
+        ]
+    },
+    {
+        "id": "9d29eb96600fe553",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "Umidade2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 680,
+        "wires": [
+            [
+                "e7a9613bf4c30b3c"
+            ]
+        ]
+    },
+    {
+        "id": "c38d4790d1d3d504",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "wind.speed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind.speed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "2d7d27d7b37daa8e"
+            ]
+        ]
+    },
+    {
+        "id": "f419bb545bf96085",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "b0ac97f842542029",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp_max2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2d7d27d7b37daa8e",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "6cd25346300b21aa",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vento2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e7a9613bf4c30b3c",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "6cd25346300b21aa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidade2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "52a084d53a0aefc6",
+        "type": "change",
+        "z": "0b395023293d7a5c",
+        "name": "feels_like2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.feels_like",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "7ba801db5fc3a07f"
+            ]
+        ]
+    },
+    {
+        "id": "7ba801db5fc3a07f",
+        "type": "ui_gauge",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "6cd25346300b21aa",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Sensação termica2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7c8dfa421f468f38",
+        "type": "json",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 150,
+        "y": 640,
+        "wires": [
+            [
+                "d262e7b62a6c060a",
+                "c7851e0726d703c2",
+                "d65170eba806e9ab",
+                "c38d4790d1d3d504",
+                "52a084d53a0aefc6",
+                "9d29eb96600fe553"
+            ]
+        ]
+    },
+    {
+        "id": "3069423ef2493a07",
+        "type": "http request",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?lat=-23.6865&lon=-46.6234&appid=a669c7581a465a7a7c6ca5cea61e378f&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "7c8dfa421f468f38"
+            ]
+        ]
+    },
+    {
+        "id": "3895c18666e9e9e0",
+        "type": "ui_chart",
+        "z": "0b395023293d7a5c",
+        "name": "",
+        "group": "6cd25346300b21aa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    }
+]
