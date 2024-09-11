@@ -1,0 +1,13 @@
+.navbar-toggler{
+    box-shadow: none !important;
+    border-color: blueviolet;
+}
+
+.bi-filter-right{
+    font-size: 36px;
+    color: blueviolet;
+}
+
+.nav-link, .navbar-brand{
+    color: aqua !important;
+}
