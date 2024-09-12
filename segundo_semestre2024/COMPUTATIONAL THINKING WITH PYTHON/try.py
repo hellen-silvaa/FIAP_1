@@ -52,3 +52,12 @@ with open('exemplo.txt', 'a') as arquivo:
     arquivo.write('esta linha será adicionada ao conteúdo existente.\n')
     arquivo.write('Adicionando outra linha\n')
 
+import logging
+
+logging.basicConfig(filename='log.log', level=logging.DEBUG, format='%(asctime)s -%(levelname)s - %(message)s')
+
+logging.debug("Isso é uma mensagem de depuração")
+logging.info("Isso é uma mensagem de info")
+logging.warning("Isso é uma mensagem de warning")
+logging.error("Isso é uma mensagem de error")
+logging.critical("Isso é uma mensagem de critical")
