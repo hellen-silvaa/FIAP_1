@@ -177,7 +177,8 @@ plt.show()
 '''print(plt.style.available)'''
 
 #---------------------------------------
-
+#0 é branco
+#1 é vermelho porque to usando um vermelho claro e escuro
 import matplotlib.pyplot as plt
 import numpy as np
 # Criar uma matriz de exemplo que represente um coração em pixel art
