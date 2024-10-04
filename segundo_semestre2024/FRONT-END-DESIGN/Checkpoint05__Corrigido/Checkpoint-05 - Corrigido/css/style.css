@@ -1,0 +1,15 @@
+body{
+    font-family: 'Heebo', sans-serif;
+}
+
+.hero {
+    min-height: 60vh;
+}
+
+.bg-grey {
+    background-color: #F4F5F9;
+}
+
+.destaque {
+    min-height: 20vh;
+}
